@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧗🏻‍♀️ What is Bouldering?</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #868686;
+            font-family: helvetica;
+            font-size: 45px;
+            font-weight: 500;
+            margin: 10px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4696D0;
+            font-family: helvetica;
+            font-size: 18px;
+            font-weight: 500;
+            border-top: 1px solid #4696D0;
+            border-bottom: 1px solid #4696D0;
+            padding: 8px;
+            margin: 10px 0 20px 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        p {
+            color: #33464B;
+            font-family: sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 15px 0 25px;
+        }
+
+        body {
+            background-image: url("images/bg-image.jpeg");
+        }
+
+        hr {
+            color: #ffffff;
+            margin: 20px 0 20px 0;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            background: #264B53;
+            color: #ffffff;
+            font-size: 12px;
+            padding: 20px 30px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background: #ffffff;
+            color: #264B53;
+            border: 1px solid #264B53;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto 30px auto;
+            padding: 30px 60px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 4px;
+        }
+
+        .read-more {
+            display: block;
+            color: #6b6a6a;
+            font-size: 13px;
+            text-decoration: underline;
+            margin: 15px 0;
+            max-width: 120px;
+        }
+
+        .read-more:hover {
+            color: #000000;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6B6A6A;
+            font-size: 13px;
+            line-height: 10px;
+            margin: 35px;
+        }
+
+        .footer-link {
+            text-align: center;
+            color: #565454;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            What is Bouldering?
+        </h1>
+        <h2>
+            Bouldering is rock climbing stripped down to its raw essentials.
+        </h2>
+        <img src="images/woman-boulder.jpg"
+            class="img-fluid"
+            alt="Woman on overhang" width="700" />
+
+        <hr>
+
+        <p>
+            Leaving behind ropes and harnesses and just using
+            climbing shoes and a bag of chalk over safety mats, your challenge is to climb short but tricky bouldering
+            "problems" <em>(a
+                route, or sequence of moves)</em> using balance, technique, strength, and your brain.
+            <br>
+            <br>
+            The climbs are high enough to be exciting, but not so high that they're hugely intimidating. Using safety
+            mats means
+            that the risks of falling off can be managed, and leaving the ropes behind means that you are free to
+            concentrate on the
+            climbing, not the equipment. <strong>It's just you, the wall, and your friends on the ground egging you
+                on.</strong>
+
+            <a href="https://www.boulderbrighton.com/what-is-bouldering" target="_blank" class="read-more">
+                Read more about it
+            </a>
+        </p>
+
+        <button class="find-button">
+            FIND A BOULDERING GYM
+        </button>
+
+        <p class="footer">
+            This page was built by
+            <a href="https://hueyteng.carbonmade.com" target="_blank" class="footer-link">
+                Huey Teng Tay
+            </a> and it is 
+            <a href="https://github.com/hueyteng/shecodes-workshop-finalproject" target="_blank" class="footer-link">
+            open-sourced</a>.
+        </p>
+    </div>
+
+    <script>
+        function findGym() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            let location = prompt("Where would you like to boulder?");
+            let age = prompt("How old are you?");
+            if (age >= 16) {
+                alert(
+                    "Thank you," + " " +
+                    name +
+                    "! We'll get back to you with a list of bouldering gyms around" +
+                    " " + location +
+                    ", so be prepared to get psyched! 💪🏼"
+                );
+            } else {
+                alert(
+                    "Thanks," + " " + name + "! As you are below the age of 16, please" +
+                    " " + "be aware that adult supervision will be required when you" +
+                    " " + "visit the bouldering gyms in" + " " + location + ". Climb safe! 🧗🏻‍♂️"
+                );
+
+            }
+        }
+        let findButton = document.querySelector(".find-button");
+        findButton.addEventListener("click", findGym);
+    </script>
+</body>
+
+</html>
